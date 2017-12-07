@@ -23,8 +23,10 @@ require 'digest/sha1'
 # PHP Recipe includes we already know PHPMyAdmin needs
 if node['phpmyadmin']['stand_alone'] then
 	include_recipe 'php'
-	include_recipe 'php::module_mbstring'
-	include_recipe 'php::module_mcrypt'
+	# include_recipe 'php::module_mbstring'
+	package 'php-mbstring'
+	# include_recipe 'php::module_mcrypt'
+	package 'php-mcrypt'
 	include_recipe 'php::module_gd'
 	include_recipe 'php::module_mysql'
 
