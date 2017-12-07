@@ -130,8 +130,5 @@ if (node['phpmyadmin'].attribute?('fpm') && node['phpmyadmin']['fpm'])
 	  min_spare_servers 2
 	  max_spare_servers 8
 	  max_children 8
-	  additional_config({
-	    :error_log => "/var/log/php-fpm/phpmyadmin.log"
-	  })
 	end
 end
