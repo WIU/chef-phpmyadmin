@@ -130,5 +130,9 @@ if (node['phpmyadmin'].attribute?('fpm') && node['phpmyadmin']['fpm'])
 	  min_spare_servers 2
 	  max_spare_servers 8
 	  max_children 8
+	  additional_config(
+	    'listen.owner' => user,
+            'listen.group' => group
+	  )
 	end
 end
