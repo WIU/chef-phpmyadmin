@@ -115,6 +115,14 @@ $cfg['ForceSSL'] = <%= node['phpmyadmin']['force_ssl'] %>;
  */
 $cfg['SendErrorReports'] = 'ask';
 
+/**
+ * Should error reporting be enabled for JavaScript errors
+ *
+ * default = 'ask'
+ */
+$cfg['ShowChgPassword'] = <%= node['phpmyadmin']['show_chg_password'] %>;
+
+
 /*
  * You can find more configuration options in Documentation.html
  * or here: http://wiki.phpmyadmin.net/pma/Config
